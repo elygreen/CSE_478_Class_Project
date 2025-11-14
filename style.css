@@ -1,0 +1,179 @@
+body {
+    font-family: 'Ariel', sans-serif;
+    overscroll-behavior: none;
+}
+
+/* Container for river rectangles*/
+.vis-container {
+    width: 45vw;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-color: #ffffff;
+    z-index: 10;
+}
+
+/* Holds all the rectangles */
+.rect-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    align-items: flex-end;
+    height: 100vh;
+}
+
+/* Base style for each rectangle */
+.rect {
+    width: 50px;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    transition: width 0.7s cubic-bezier(0.65, 0, 0.35, 1),
+                height 0.7s cubic-bezier(0.65, 0, 0.35, 1),
+                margin-left 0.7s cubic-bezier(0.65, 0, 0.35, 1),
+                margin-right 0.7s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+
+/* Container for the scrolling text */
+.scroll-container {
+    width: 55vw;
+    margin-left: 45vw;
+    position: relative;
+    z-index: 20;
+}
+
+/*  Trigger section */
+.scroll-trigger {
+    /* Each trigger is a full screen high */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 4rem;
+}
+
+
+
+/* State 1: Widen rect 1 */
+body.step-1 .rect-1 {
+    width: 250px;
+}
+
+
+
+/* State 2: Shrink rect 1, Widen rect 2 */
+body.step-2 .rect-1 {
+    width: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+body.step-2 .rect-2 {
+    width: 250px;
+}
+
+
+
+
+/* State 3: Shrink rect 2, Widen rect 3 */
+body.step-3 .rect-1 { width: 0; margin: 0; }
+body.step-3 .rect-2 {
+    width: 0; 
+    margin: 0;
+}
+
+body.step-3 .rect-3 {
+    width: 250px;
+}
+
+
+
+/* State 4: Shrink rect 3, Widen rect 4 */
+body.step-4 .rect-1,
+body.step-4 .rect-2 { width: 0; margin: 0; }
+body.step-4 .rect-3 {
+    width: 0;
+    margin: 0;
+}
+
+body.step-4 .rect-4 {
+    width: 250px;
+}
+
+
+
+/* State 5: Shrink rect 4, Widen rect 5 */
+body.step-5 .rect-1,
+body.step-5 .rect-2,
+body.step-5 .rect-3 { width: 0; margin: 0; }
+body.step-5 .rect-4 {
+    width: 0;
+    margin: 0;
+}
+
+body.step-5 .rect-5 {
+    width: 250px;
+}
+
+
+
+/* State 6: Shrink rect 5, Widen rect 6 */
+body.step-6 .rect-1,
+body.step-6 .rect-2,
+body.step-6 .rect-3,
+body.step-6 .rect-4 { width: 0; margin: 0; }
+body.step-6 .rect-5 {
+    width: 0;
+    margin: 0;
+}
+
+body.step-6 .rect-6 {
+    width: 250px;
+}
+
+
+
+/* State 7: Shrink rect 6, Widen rect 7 */
+body.step-7 .rect-1,
+body.step-7 .rect-2,
+body.step-7 .rect-3,
+body.step-7 .rect-4,
+body.step-7 .rect-5 { width: 0; margin: 0; }
+body.step-7 .rect-6 {
+    width: 0;
+    margin: 0;
+}
+
+body.step-7 .rect-7 {
+    width: 250px;
+}
+
+
+
+/* State 8: Shrink rect 7, Widen rect 8 */
+body.step-8 .rect-1,
+body.step-8 .rect-2,
+body.step-8 .rect-3,
+body.step-8 .rect-4,
+body.step-8 .rect-5,
+body.step-8 .rect-6 { width: 0; margin: 0; }
+body.step-8 .rect-7 {
+    width: 0;
+    margin: 0;
+}
+
+body.step-8 .rect-8 {
+    width: 250px; 
+}
+
+
+
+/* Final State: shrink to nothing */
+body.step-9 .rect {
+    width: 0;
+    margin: 0;
+}
