@@ -3,15 +3,250 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>CSE 478 Project</title>
+        <title>CSE 478 Project: Arizona's Water Crisis</title>
         <script src="https://cdn.tailwindcss.com"></script>
-        <link rel="stylesheet" href="style.css">
-        <script src="script.js"></script>
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/presstyle.css">
+        <link rel="stylesheet" href="css/river_chart.css">
+        <link rel="stylesheet" href="css/groundwater.css">
     </head>
-    <body class="bg-blue-600 text-white flex items-center justify-center min-h-screen">
-        <div>
-            <h1 class="text-center font-bold">Oops! This page will be updated when the project is due on December 5th!</h1>
-            <h2 class="text-center font-bold">I'm surprised anyone scanned the QR code to be honest!</h2>
+
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <script src="https://unpkg.com/d3-sankey@0.12/dist/d3-sankey.min.js"></script>
+
+        <script src="js/script.js"></script>
+        <script src="js/river_chart.js"></script>
+        <script src="js/presScript.js"></script>
+        <script src="js/phoenix_charts.js"></script>
+        <script src="js/hooverDam.js"></script>
+        <script src="js/glenCanyonDam.js"></script>
+        <script src="js/groundwater_chart.js"></script>
+
+    <body class="bg-white text-gray-900">
+        <div class="vis-container">
+            <div class="rect-wrapper">
+                <div class="rect rect-1 bg-blue-900">
+                    <img src=images/water.jpeg
+                        class="rect-background-img" alt=images/water.jpg>
+                </div>
+                <div class="rect rect-2 bg-blue-700">
+                    <img src=images/phoenix.png
+                        class="rect-background-img" alt=images/water.jpg>
+                </div>
+                <div class="rect rect-3 bg-blue-800">
+                    <img src=images/map.jpg
+                        class="rect-background-img" alt=images/water.jpg>
+                </div>
+                <div class="rect rect-4 bg-blue-500">
+                    <img src=images/mead.png
+                        class="rect-background-img" alt=images/water.jpg>
+                </div>
+                <div class="rect rect-5 bg-blue-400">
+                    <img src=images/papago.jpg
+                        class="rect-background-img" alt=images/water.jpg>
+                </div>
+                <div class="rect rect-6 bg-blue-200">
+                    <img src=images/river.jpg
+                        class="rect-background-img" alt=images/water.jpg>
+                </div>
+                <div class="rect rect-7 bg-blue-500">
+                    <img src=images/powell.jpg
+                        class="rect-background-img" alt=images/water.jpg>
+                </div>
+                <div class="rect rect-8 bg-blue-700">
+                    <img src=images/basin.jpg
+                        class="rect-background-img" alt=images/water.jpg>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-container">
+
+            <!-- Section 0: Introduction -->  
+            <section class="scroll-trigger" data-step="0">
+                <h2 class="text-4xl font-bold mb-4">The story of the Colorado River and its current challenges</h2>
+                <p class="text-xl text-gray-600">
+                    The lifeline for 40 million people in the American West, the Colorado River is not just a landscape
+                    but a critical resource under threat. This is the story of how we got here and what lies ahead. For
+                    decades, the river has brought life into the desert, supporting cities, agriculture, and ecosystems,
+                    but the era of abundance is ending. After two decades of drought and overallocation, the system is
+                    at a breaking point. This presentation explores the history, current state, and future projections.
+                </p>
+            </section>
+
+            <!-- Section 1: Phoenix Water Use vs. Population -->  
+            <section class="scroll-trigger" data-step="1">
+                <h2 class="text-3xl font-bold mb-4">Phoenix Water Use vs. Population (1990-2019)</h2>
+                <p class="text-lg mb-4">
+                    Phoenix has grown by hundreds of thousands of residents since 1990, yet total water production has stayed 
+                    roughly the same. This type of growth simply isn't sustainable, and it's not getting any better.
+                    The chart below compares total water production (acre-feet) to population.
+
+                    <strong>Explore the data:</strong> Hover over the chart below to compare the rising population
+                    against the stagnating water production in Phoenix from 1990 to 2019.
+                </p>
+                <div class="chart-container">
+                    <div id="phoenix-water-history"></div>
+                </div>
+            </section>
+
+            <!-- Section 2: Phoenix Population Projections -->  
+            <section class="scroll-trigger" data-step="2">
+                <h2 class="text-3xl font-bold mb-4">Phoenix Population Projections (2015-2065)</h2>
+                <p class="text-lg mb-4">
+                    Planmning for the future in the desert is tricky. The city must prepare for widely different
+                    possibilities that all result in very different realities for the region. Every new resident
+                    adds pressure to the water system which is already stretched thin.
+
+                    <strong>Interactive:</strong> Move your mouse across the chart to see how the demand gap widens under Low,
+                    Medium, and High population growth scenarios from 2015 to 2065.
+                </p>
+                <div class="chart-container">
+                    <div id="phoenix-pop-projections"></div>
+                </div>
+            </section>
+
+            <!-- Section 3: How Phoenix Meets Demand -->  
+            <section class="scroll-trigger" data-step="3">
+                <h2 class="text-3xl font-bold mb-4">How Phoenix Meets Demand</h2>
+                <p class="text-lg mb-2">
+                    Phoenix does not rely on just a single srouce for its water. Instead, it uses a complex combination of
+                    different source to meet its water needs: Snowmelt, Colorado River water, reclaimed wastewater, and groundwater
+                    all play a role. Understanding where our water comes from is the first step in understanding where vulnerabilities lie.
+
+                    <strong>Trace the flow:</strong> This Sankey diagram visualizes the city's water sources. hover over the flows
+                    to see exactly how much water moves from specific sources to homes, industries, and and parks & irrigation and another
+                    thing to note: this doesn't include agriculture which uses up to 72% of all our water.
+                </p>
+                <div class="chart-container flex flex-col lg:flex-row gap-6 items-stretch">
+                    <div id="phoenix-water-sankey" class="flex-1"></div>
+                    <div id="phoenix-sankey-detail" class="source-detail lg:w-80">
+                        <strong>Tip:</strong> Hover a flow to see how much of Phoenix's water
+                        moves from each source (left) to each type of use (right).
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 4: Overdrawn and Overallocated -->  
+            <section class="scroll-trigger pb-24" data-step="4">
+                <h2 class="text-3xl font-bold mb-4">Overdrawn and Overallocated</h2>
+                <p class="text-lg">
+                    Displayed below is a chart of the natural flow of the Colorado River compared to its water allocation over time.
+                    For over a century, the Colorado River sustained the American West, but since 2000, the river's natural flow
+                    has been consistently lower than the water allocated to various states and regions. Forty million people
+                    depend on a river that can no longer support them.
+                    <br><br>
+                    The river is overallocated by nearly 20%. <strong>Cursor over the blue line to see the 10 year moving
+                    average of the river and compare that to the total allocation of 16.5 million acre-feet.</strong>
+                </p>
+                <div class="chart-container">
+                    <p class="text-sm text-gray-600 text-center mb-4">
+                        Comparison of Colorado River Natural Flow (Blue) vs. Legal Allocation (Red)
+                    </p>
+                    <div id="riverChart"></div>
+                </div>
+            </section>
+
+            <!-- Section 5: Colorado River Law Allocation -->  
+            <section class="scroll-trigger" data-step="5">
+                <h2 class="text-3xl font-bold mb-4">Colorado River Law Allocation</h2>
+                <p class="text-lg mb-4">
+                    The "Law of the River" is a complex set of agreements, compacts, and court decisions that dictate how
+                    the Colorado River's water is divided among the seven basin states and Mexico. The law recognizes the
+                    effect that drought has on water availability and includes provisions for reducing allocations during times of shortage.
+                    <br><br>
+                    Note that Arizona is among the top users of Colorado River water, receiving 2.8 million acre-feet (MAF) annually under normal conditions.
+                </p>
+                <ul class="list-disc ml-8 mb-4 text-lg">
+                    <li><strong>California:</strong> 4.4 MAF</li>
+                    <li><strong>Arizona:</strong> 2.8 MAF</li>
+                    <li><strong>Nevada:</strong> 0.3 MAF</li>
+                </ul>
+                <p class="text-lg mb-6">
+                    Below is an interactive map of the Colorado Basin states. <strong>Use the slider to see how drought tiers affect allocation.</strong>
+                </p>
+
+                <div class="mt-6 mb-4">
+                    <label for="drought-slider" class="block text-lg font-semibold mb-2">
+                        Drought Tier: <span id="tier-label" class="text-blue-600">No Drought</span>
+                    </label>
+                    <input type="range" id="drought-slider" min="0" max="6" value="0" step="1"
+                        class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer" />
+                    <div class="flex justify-between text-sm text-gray-600 mt-1">
+                        <span>No Drought</span>
+                        <span>Tier 1</span>
+                        <span>Tier 2</span>
+                        <span>Tier 3</span>
+                        <span>Tier 4</span>
+                    </div>
+                </div>
+                <div class="flex gap-4 mb-4">
+                    <button id="toggle-basins" class="toggle-btn">Hide Basins</button>
+                    <button id="toggle-rivers" class="toggle-btn">Hide Rivers</button>
+                </div>
+                <div id="map-container" class="mt-6"></div>
+            </section>
+
+            <!-- Section 6: Lake Mead Storage -->  
+            <section class="scroll-trigger" data-step="6">
+                <h2 class="text-3xl font-bold mb-4">Lake Mead Storage (1980-2025)</h2>
+                <p class="text-lg mb-4">
+                    Lake Mead is the main "checking account" for the Lower Basin states. As levels drop, the risk of having
+                    to deplete more of our water reserves increases. We are currently hovering dangerously close to thresholds
+                    where water delivery becomes physically difficult.
+                    <br><br>
+                    <strong>Witness the Decline:</strong> Below is a visualization of Lake Mead's total water storage
+                </p>
+                <div class="chart-container">
+                    <div id="lake-mead-storage"></div>
+                </div>
+            </section>
+
+            <!-- Section 7: Lake Powell Storage -->  
+            <section class="scroll-trigger" data-step="7">
+                <h2 class="text-3xl font-bold mb-4">Lake Powell's Declining Reservoir</h2>
+                <p class="text-lg mb-4">
+                    Upstream, Lake Powell acts as the system's shock absorber, trapping snowmelt from the Rockies to regulate flow
+                    to the Lower Basin. However, with prolonged drought and increased water demand, Lake Powell's levels have plummeted
+                    as well, and the dam struggles to maintain its critical functions.
+                    <br><br>
+                    <strong>See the Impact:</strong> The chart below illustrates the dramatic decrease in Lake Powell's water storage over time.
+                </p>
+                <div class="chart-container">
+                    <div id="glen-canyon-chart"></div>
+                </div>
+            </section>
+
+            <!-- Section 8: Groundwater Depletion -->  
+            <section class="scroll-trigger" data-step="8">
+                <h2 class="text-3xl font-bold mb-4">The Invisible Crisis: Groundwater</h2>
+                <p class="text-lg mb-4">
+                    While the river shrinks, a quieter emergency is unfolding beneath us. As surface water dries up,
+                    agriculture and cities turn to groundwater, leading to alarming rates of depletion. Our whole reliability on the
+                    Colorado River was supposed to move us away from being reliant on groundwater, a resource that takes
+                    thousands of years to replenish. Yet, as the river's flow diminishes, we are pumping our groundwater
+                    faster than nature can put it back, permanently draining our last emergency fund.
+                    <br><br>
+                    <strong>The Last Reserves:</strong> The bar chart below compares groundwater depletion rates across the country.
+                    Arizona's groundwater reserves, from the Alluvial Basins, are among the most depleted in the nation.
+                </p>
+                <div class="gw-chart-container">
+                    <div id="groundwaterChart"></div>
+                </div>
+            </section>
+
+            <!-- Section 9: Conclusion -->
+            <section class="scroll-trigger" data-step="9">
+                <h2 class="text-4xl font-bold mb-4">The End of the Beginning</h2>
+                <p class="text-xl text-gray-600">
+                    The era of cheap, abundant water is over. The Colorado River, once a symbol of prosperity and growth, is
+                    shrinkinkng and our aquifers are dropping. Securing the future of the American West will reuire
+                    more than just efficiency and luck, it now requires a fundamental rethinking of how we live in the desert.
+                    The choices we make in these upcoming years will define this lanscape for generations to come.
+                </p>
+            </section>
+
         </div>
     </body>
 </html>
