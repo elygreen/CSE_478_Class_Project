@@ -1,0 +1,64 @@
+﻿Drought_Tier,State_ID,State,Allotment,Allocation
+
+,1,Mexico,1.5,1.5
+,2,New Mexico,0.84,0.84
+,3,California,4.4,4.4
+,4,Utah,1.71,1.71
+,5,Colorado,3.88,3.88
+,6,Wyoming,1.05,1.05
+,7,Nevada,0.3,0.3
+,8,Arizona,2.85,2.85
+
+0,1,Mexico,1.5,1.459
+0,2,New Mexico,0.84,0.84
+0,3,California,4.4,4.4
+0,4,Utah,1.71,1.71
+0,5,Colorado,3.88,3.88
+0,6,Wyoming,1.05,1.05
+0,7,Nevada,0.3,0.292
+0,8,Arizona,2.85,2.658
+
+1,1,Mexico,1.5,1.42
+1,2,New Mexico,0.84,0.84
+1,3,California,4.4,4.4
+1,4,Utah,1.71,1.71
+1,5,Colorado,3.88,3.88
+1,6,Wyoming,1.05,1.05
+1,7,Nevada,0.3,0.279
+1,8,Arizona,2.85,2.338
+
+2,1,Mexico,1.5,1.396
+2,2,New Mexico,0.84,0.84
+2,3,California,4.4,4.4
+2,4,Utah,1.71,1.71
+2,5,Colorado,3.88,3.88
+2,6,Wyoming,1.05,1.05
+2,7,Nevada,0.3,0.275
+2,8,Arizona,2.85,2.258
+
+2.5,1,Mexico,1.5,1.391
+2.5,2,New Mexico,0.84,0.84
+2.5,3,California,4.4,4.4
+2.5,4,Utah,1.71,1.71
+2.5,5,Colorado,3.88,3.88
+2.5,6,Wyoming,1.05,1.05
+2.5,7,Nevada,0.3,0.27
+2.5,8,Arizona,2.85,2.21
+
+3,1,Mexico,1.5,1.386
+3,2,New Mexico,0.84,0.84
+3,3,California,4.4,4.4
+3,4,Utah,1.71,1.71
+3,5,Colorado,3.88,3.88
+3,6,Wyoming,1.05,1.05
+3,7,Nevada,0.3,0.265
+3,8,Arizona,2.85,2.13
+
+4,1,Mexico,1.5,1.38
+4,2,New Mexico,0.84,0.84
+4,3,California,4.4,4.05
+4,4,Utah,1.71,1.71
+4,5,Colorado,3.88,3.88
+4,6,Wyoming,1.05,1.05
+4,7,Nevada,0.3,0.26
+4,8,Arizona,2.85,2.05

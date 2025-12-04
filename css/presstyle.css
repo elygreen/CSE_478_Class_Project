@@ -1,0 +1,52 @@
+.state-hover {
+    stroke: black !important;
+    stroke-width: 3px !important;
+    cursor: pointer;
+    transition: stroke-width 0.2s ease, stroke 0.2s ease;
+}
+
+.state-hover:hover {
+    stroke: #ff6600 !important; 
+    stroke-width: 4px !important;
+}
+
+/*State path animation */
+.states path {
+    transition: fill 0.8s ease-in-out;
+}
+
+/* Gradient animation */
+@keyframes fillUp {
+    from {
+        stop-opacity: 0;
+    }
+    to {
+        stop-opacity: 1;
+    }
+}
+
+/* Map container positioning */
+#map-container {
+    position: relative;
+    width: 100%;
+    min-height: 600px;
+}
+
+.toggle-btn {
+    padding: 0.5rem 1rem;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-size: 1rem;
+}
+
+.toggle-btn:hover {
+    background-color: #1d4ed8;
+}
+
+.toggle-btn:active {
+    background-color: #1e40af;
+}

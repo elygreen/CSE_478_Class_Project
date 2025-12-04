@@ -1,0 +1,69 @@
+﻿Area (or subarea) Name,Key (ID number on index map),GW Depletion Volume (km^3),GW Depletion Volume (km^3),Size of Area (km^2),AVERAGE RATE OF GROUNDWATER DEPLETION (km^3/yr),,Depletion Intensity (m/yr),
+,,1900-2000,1900-2008,,1961-1970,2001-2008,1900-2008,2001-2008
+Atlantic Coastal Plain:,,,,,,,,
+ Georgia & northeast Florida,1,3.5,3.5,66534,0.0620,0.0000,4.871E-04,0.000E+00
+" Long Island, New York",2,1.6,1.1,3380,0.0400,-0.0530,3.013E-03,-1.568E-02
+ Maryland and Delaware,3,1.6,1.9,18489,0.0190,0.0420,9.515E-04,2.272E-03
+ New Jersey,4,1.2,1.2,11614,0.0370,0.0000,9.567E-04,0.000E+00
+ North Carolina,5,1.2,1.6,55901,-0.0160,0.0530,2.650E-04,9.481E-04
+ South Carolina ,6,2.8,3.2,48931,-0.0030,0.0620,6.055E-04,1.267E-03
+ Virginia,7,2.5,4.5,18761,0.1440,0.2440,2.221E-03,1.301E-02
+,,,,,,,,
+Gulf Coastal Plain:,,,,,,,,
+" Coastal Lowlands of AL,FL,LA,MS",8,37.8,38.5,140056,0.788,0.090,2.545E-03,6.426E-04
+ Houston Area and Northern Part of TX Gulf Coast,9,28.9,31.1,50157,0.502,0.280,5.741E-03,5.582E-03
+ Central Part of Gulf Coast Aquifer System in TX,10,4.8,4.8,61200,0.183,0.000,7.262E-04,0.000E+00
+" Winter Garden Area, Southern Part of TX Gulf Coast",11,9.5,9.6,35571,0.283,0.012,2.499E-03,3.374E-04
+ Mississippi Embayment,12,117.6,182,201483,-0.179,8.048,8.364E-03,3.994E-02
+,,,,,,,,
+High Plains (Ogallala) Aquifer,13,258.6,353.3,461471,6.192,11.83,7.089E-03,2.564E-02
+     Colorado,,,,38815,,,,
+     Kansas,,,,82855,,,,
+     Nebraska,,,,168727,,,,
+     New Mexico,,,,24269,,,,
+     Oklahoma,,,,18911,,,,
+     South Dakota,,,,14489,,,,
+     Texas,,,,92185,,,,
+     Wyoming,,,,19214,,,,
+,,,area sum of subs = ,459465,,,,
+,,,,,,,,
+"Central Valley, California",14,113.4,144.8,54560,0.998,3.919,2.457E-02,7.183E-02
+,,,,,,,,
+Western US Alluvial Basins:,,,,,,,,
+" Alluvial Basins, Arizona",15,105.3,102,210743,3.076,-0.410,4.481E-03,-1.945E-03
+" Antelope Valley, California",16,10.5,10.6,6328,0.240,0.005,1.551E-02,7.901E-04
+" Coachella Valley, California",17,3.2,3.7,4333,0.055,0.060,7.907E-03,1.385E-02
+" Death Valley Region, CA-NV",18,3.4,4,44108,0.060,0.080,8.397E-04,1.814E-03
+" Escalante Valley, Utah",19,3.2,3.7,1236,0.057,0.062,2.772E-02,5.016E-02
+" Estancia Basin, New Mexico",20,1.7,1.9,6460,0.027,0.028,2.723E-03,4.334E-03
+" Hueco Bolson, New Mexico-Texas",21,4.6,5.7,3600,0.056,0.135,1.466E-02,3.750E-02
+" Las Vegas Valley, Nevada",22,2.3,2.1,1958,0.043,-0.026,9.931E-03,-1.328E-02
+" Los Angeles Basin, CA",23,4.1,4.2,1362,-0.016,0.014,2.855E-02,1.028E-02
+" Mesilla Basin, New Mexico",24,0.3,0.4,2585,0.007,0.010,1.433E-03,3.868E-03
+" Middle Rio Grande Basin, NM",25,2.4,2.7,7886,0.040,0.042,3.170E-03,5.326E-03
+" Milford Area, Utah",26,1,1.2,1031,0.020,0.021,1.078E-02,2.037E-02
+" Mimbres Basin, New Mexico",27,4.2,4.2,11320,0.079,0.000,3.435E-03,0.000E+00
+" Mojave River Basin, CA",28,3.2,3.6,9734,0.059,0.041,3.424E-03,4.212E-03
+" Pahvant Valley, Utah",29,0.8,1.1,705,0.030,0.037,1.445E-02,5.248E-02
+" Paradise Valley, Nevada",30,0.2,0.3,2100,-0.005,0.005,1.323E-03,2.381E-03
+" Pecos River Basin Alluvium, TX",31,20.2,21,14504,0.699,0.093,1.341E-02,6.412E-03
+" San Luis Valley, Colorado",32,3.3,3.6,8217,0.054,0.045,4.057E-03,5.476E-03
+" Tularosa Basin, New Mexico",33,1.1,1.5,10458,0.015,0.050,1.328E-03,4.781E-03
+,,,,,,,,
+Western Volcanic Aquifer Systems:,,,,,,,,
+ Columbia Plateau Aquifer System,34,-7.2,-5.9,114177,-0.289,0.170,-4.785E-04,1.489E-03
+" Oahu, Hawaii",35,0.7,0.7,830,0.009,0.005,7.809E-03,6.024E-03
+" Snake River Plain, Idaho",36,-41.4,-39.9,37300,-0.027,0.180,-9.905E-03,4.826E-03
+,,,,,,,,
+Deep Confined Bedrock Aquifers:,,,,,,,,
+" Black Mesa Area, Arizona",37,0.2,0.3,14073,0.001,0.008,1.974E-04,5.685E-04
+ Midwest Cambrian-Ordovician Aquifer System,38,12.7,14.1,460286,0.277,0.175,2.836E-04,3.802E-04
+" Dakota Aquifer, Northern Great Plains",39,19.7,20.4,655613,0.139,0.089,2.881E-04,1.358E-04
+" Denver Basin, Colorado",40,0.4,0.8,17584,0.011,0.051,4.213E-04,2.900E-03
+,,,,,,,,
+Agricultural and Land Drainage  (not mapped),,54,54,,,,,
+TOTAL (all US systems),,799.2,1003.2,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
